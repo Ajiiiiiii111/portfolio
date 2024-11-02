@@ -118,6 +118,20 @@ span{
     gap: 10rem;
 }
 
+.skill {
+    border: 5px solid #096121; /* Border color */
+    padding: 10px; /* Padding inside the border */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 400px; /* Maximum width for responsiveness */
+    margin: auto; /* Center the div */
+}
+
+body.light-theme .skill {
+    color: #03316d;
+    border: #03316d 5px solid
+
+}
+
 .aboutimg img {
     position: relative;
     width: 35vw;
@@ -167,7 +181,8 @@ span{
 .portfolioinfo p {
     font-size: 1.6rem;
     margin: 0.3rem 0 1rem;
-    color: rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 .portfoliocontainer {
