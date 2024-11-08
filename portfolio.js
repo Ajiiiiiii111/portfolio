@@ -1,3 +1,4 @@
+//responsive
 let sections = document.querySelectorAll('section')
 let navLinks = document.querySelectorAll('header nav a')
 
@@ -34,7 +35,7 @@ document.querySelector('#home').classList.add('visible');
 const observerOptions = {
   root: null, // Use the viewport as the root
   rootMargin: '0px',
-  threshold: 0.5 // Trigger when 50% of the section is visible
+  threshold: 0.1 // Trigger when 50% of the section is visible
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -55,7 +56,7 @@ sections.forEach(section => {
 });
 
 
-
+// dark mode
 const themeToggle = document.getElementById('themeToggle');
 let isDarkTheme = true;
 

@@ -117,9 +117,9 @@ span{
     
 .homeimg img{
     position: relative;
-    width: 35vw;
+    width: 28vw;
     border-radius: 50%;
-    top: 1rem;
+    top: 0.1rem;
     border: #096121 5px solid;
     }
     
@@ -133,16 +133,47 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 3rem;
 }
 
 .skill {
     border: 5px solid #096121; /* Border color */
-    padding: 4rem 10rem 1rem 5rem; /* Padding inside the border */
+    padding: 0 10rem 1rem 2rem; /* Padding inside the border */
     border-radius: 5px; /* Rounded corners */
-    max-width: 400px; /* Maximum width for responsiveness */
-    margin: auto; /* Center the div */
+    max-width: 300px; /* Maximum width for responsiveness */
+    max-height: 400px;
+    margin: auto; 
 }
+
+.Education {
+    font-size: 5px;
+    border: 5px solid #096121; /* Border color */
+    padding: 0.2rem 2rem 1rem 2rem; /* Padding inside the border */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 300px; /* Maximum width for responsiveness */
+    margin: auto;
+    height: 190px;
+}
+
+.Education h3 span {
+    font-size: 25px;
+}
+
+.skill h3 span {
+    font-size: 25px;
+}
+
+.pe {
+    font-size: 12px;
+}
+
+.containerSE {
+    display: flex; 
+    justify-content: space-between;  
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+
 
 body.light-theme .skill {
     color: #03316d;
@@ -150,12 +181,18 @@ body.light-theme .skill {
 
 }
 
+body.light-theme .Education {
+    color: #03316d;
+    border: #03316d 5px solid
+
+}
+
 .aboutimg img {
     position: relative;
-    width: 35vw;
+    width: 28vw;
     border-radius: 50%;
     border: #096121 5px solid;
-    top: 1rem;
+    top: 0.5rem;
 
 }
 
@@ -175,16 +212,15 @@ body.light-theme .skill {
     font-size: 3rem;
     color: white;
 }
-
-.aboutcontent p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+.aboutcontent {
+    font-size: 1.1rem;
+    margin: 1rem 0 3rem;
     color: white;
 }
 
 
 .portfolio {
-    background-color: #1A2421;
+    background-color: #191A19;
 }
 
 .portfolio h2 {
@@ -216,7 +252,7 @@ body.light-theme .skill {
 .portfoliobox {
     position: relative;
     border-radius: 2rem;
-    border: #5ce680 5px solid;
+    border: #5ce680 3px solid;
     overflow: hidden;
     display: flex;
 }
@@ -272,7 +308,7 @@ body.light-theme .skill {
 }
 
 .contact {
-    background-color:#232B2B;
+    background-color:#191A19;
 }
 
 .contact h2 {
@@ -434,7 +470,7 @@ body.light-theme .homeimg img{
 }
 
 body.light-theme .about {
-background-color: #F5F5F5
+background-color: #F5F5F5;
 }
 
 body.light-theme .aboutimg img{
@@ -442,11 +478,11 @@ body.light-theme .aboutimg img{
 }
 
 body.light-theme .portfolio {
-background-color: #FEFEFA;
+background-color: #F5F5F5;
 }
 
 body.light-theme .contact {
-background-color: #F5FEFD;
+background-color: #F5F5F5;
 }
 
 
@@ -521,7 +557,7 @@ body.light-theme .logo:hover{
 body.light-theme .portfoliobox {
     border-radius: 2rem;
     overflow: hidden;
-    border: #4292e7 5px solid;
+    border: #4292e7 3px solid;
 }
 
 body.light-theme .navbar a:hover {
@@ -579,6 +615,11 @@ body.light-theme .footer .copyright {
 @media(max-width: 768px){
     #menuicon{
         display: block;
+        margin-right: 10px;
+    }
+
+    .logo {
+        margin-left: 10px;
     }
 
     .navbar{
@@ -625,16 +666,19 @@ body.light-theme .footer .copyright {
     .homecontent h1 {
         font-size: 5rem;
     }
+    .homeimg {
+        margin-top: 10px;
+    }
     .homeimg img{
         width: 70vw;
-        margin-top: 4rem;
+        margin-top: 1rem;
     }
     .about{
         flex-direction: column-reverse;
     }
     .about img {
-        width: 70vw;
         margin-top: 4rem;
+        width: 70vw;
     }
     .portfolio h2 {
         margin-bottom: 3rem;
@@ -644,3 +688,59 @@ body.light-theme .footer .copyright {
     }
 }
 
+/* For medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Ensure skill and education are side-by-side but with reduced width */
+    .containerSE {
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: space-around; /* Add spacing between elements */
+    }
+
+    .skill {
+        padding: 0 3rem 1rem 1rem; /* Adjust padding */
+        width: 45%; /* Set width to 45% for side-by-side layout */
+        margin: 10px; /* Add margin */
+    }
+
+    .Education {
+        padding: 0.2rem 1.5rem 1rem 1.5rem; /* Adjust padding */
+        width: 45%; /* Set width to 45% for side-by-side layout */
+        height: 110px; /* Adjust height */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 10px; /* Adjust font size */
+    }
+}
+
+/* For small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .skill {
+        padding: 0 2rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make skill take most of the screen width */
+    }
+
+    .Education {
+        padding: 0.2rem 1rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make education take most of the screen width */
+        height: 110px; /* Adjust height for smaller screens */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 8px; /* Further adjust font size */
+    }
+
+    .containerSE {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        margin-top: 10px; /* Adjust margin */
+    }
+}
