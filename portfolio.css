@@ -134,6 +134,7 @@ span{
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    
 }
 
 .skill {
@@ -172,6 +173,7 @@ span{
     justify-content: space-between;  
     flex-wrap: wrap; 
     margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 
@@ -509,10 +511,13 @@ body.light-theme span {
 
 body.light-theme h1,
 body.light-theme h2, 
-body.light-theme h3, 
-body.light-theme h4, 
+body.light-theme h3,  
 body.light-theme p {
     color: #030303;
+}
+
+body.light-theme h4 {
+    color: #4292e7;
 }
 
 body.light-theme header,
@@ -592,10 +597,15 @@ body.light-theme .footer .copyright {
 }
 
 @media(max-width:1200px){
+    
     html{
         font-size: 55%;
     }
+    
+
 }
+
+
 
 @media(max-width:991px){
     header{
@@ -610,6 +620,8 @@ body.light-theme .footer .copyright {
     .footer{
         padding: 2rem 3%;
     }
+
+   
 }
 
 @media(max-width: 768px){
@@ -620,6 +632,12 @@ body.light-theme .footer .copyright {
 
     .logo {
         margin-left: 10px;
+        font-size: 25px;
+    }
+
+    .btnchange {
+        height: 4rem;
+
     }
 
     .navbar{
@@ -719,6 +737,11 @@ body.light-theme .footer .copyright {
 
 /* For small screens (max-width: 480px) */
 @media (max-width: 480px) {
+
+    .wrapper {
+        max-width: 80%; /* Allow full width on small screens */
+    }
+
     .skill {
         padding: 0 2rem 1rem 1rem; /* Adjust padding */
         width: 90%; /* Make skill take most of the screen width */

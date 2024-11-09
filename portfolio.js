@@ -26,43 +26,58 @@ window.onscroll = () => {
     });
 };
 
-// Create an IntersectionObserver to track when sections are in view
+// Select all sections
 const section = document.querySelectorAll('section');
 
-// Ensure that the Home section is visible on load
-document.querySelector('#home').classList.add('visible');
+// Remove the manual visibility for Home
+// document.querySelector('#home').classList.add('visible');  // This line is no longer needed
 
+// Observer options to trigger when 10% of the section is visible
 const observerOptions = {
   root: null, // Use the viewport as the root
   rootMargin: '0px',
-  threshold: 0.1 // Trigger when 50% of the section is visible
+  threshold: 0.15// Trigger when 10% of the section is visible
 };
 
+// Create an IntersectionObserver instance
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible'); // Add the 'visible' class when the section comes into view
+      entry.target.classList.add('visible'); // Add 'visible' class when the section comes into view
     } else {
-      entry.target.classList.remove('visible'); // Remove the 'visible' class when the section goes out of view
+      entry.target.classList.remove('visible'); // Remove 'visible' class when the section goes out of view
     }
   });
 }, observerOptions);
 
-// Start observing each section except the Home section
+// Start observing each section
 sections.forEach(section => {
-  if (section.id !== 'home') {
-    observer.observe(section);
-  }
+  observer.observe(section); // Observe all sections, including the Home section
 });
+
 
 
 // dark mode
 const themeToggle = document.getElementById('themeToggle');
 let isDarkTheme = true;
 
-// Initialize theme based on current state
+// Function to set the correct image based on the theme
+function setToggleImage() {
+    const img = document.createElement('img');
+    img.src = isDarkTheme ? 'moon.png' : 'sun.png'; // Replace with your actual image paths
+    img.alt = isDarkTheme ? 'Dark Mode' : 'Light Mode'; // Accessibility text
+
+    // size of the image in btn
+    img.style.width = '30px'; 
+    img.style.height = '30px'; 
+
+    themeToggle.innerHTML = ''; // Clear the previous content
+    themeToggle.appendChild(img); // Append the new image
+}
+
+// Initialize theme based on the current state
 document.body.classList.add(isDarkTheme ? 'dark-theme' : 'light-theme');
-themeToggle.textContent = isDarkTheme ? 'Dark Mode' : 'Light Mode';
+setToggleImage(); // Set the image on load
 
 themeToggle.addEventListener('click', () => {
     // Toggle the theme class based on the current state
@@ -70,6 +85,7 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme', isDarkTheme);
     document.body.classList.toggle('light-theme', !isDarkTheme);
 
-    // Update the button text accordingly
-    themeToggle.textContent = isDarkTheme ? 'Dark Mode' : 'Light Mode';
+    // Update the button with the new image
+    setToggleImage();
 });
+
