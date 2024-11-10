@@ -29,14 +29,14 @@ window.onscroll = () => {
 // Select all sections
 const section = document.querySelectorAll('section');
 
-// Remove the manual visibility for Home
-// document.querySelector('#home').classList.add('visible');  // This line is no longer needed
+// remove visibility for Home
+// document.querySelector('#home').classList.add('visible');  // 
 
-// Observer options to trigger when 10% of the section is visible
+// trigger when 10% of the section is visible
 const observerOptions = {
   root: null, // Use the viewport as the root
   rootMargin: '0px',
-  threshold: 0.15// Trigger when 10% of the section is visible
+  threshold: 0.1// trigger when 10% of the section is visible
 };
 
 // Create an IntersectionObserver instance
@@ -63,29 +63,29 @@ let isDarkTheme = true;
 
 // Function to set the correct image based on the theme
 function setToggleImage() {
-    const img = document.createElement('img');
-    img.src = isDarkTheme ? 'moon.png' : 'sun.png'; // Replace with your actual image paths
-    img.alt = isDarkTheme ? 'Dark Mode' : 'Light Mode'; // Accessibility text
+  const img = document.createElement('img');
+  img.src = isDarkTheme ? 'moon.png' : 'sun.png'; 
+  img.alt = isDarkTheme ? 'Dark Mode' : 'Light Mode'; 
 
-    // size of the image in btn
-    img.style.width = '30px'; 
-    img.style.height = '30px'; 
+  img.style.width = '30px';  // size in btnchange
+  img.style.height = '30px';
 
-    themeToggle.innerHTML = ''; // Clear the previous content
-    themeToggle.appendChild(img); // Append the new image
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+      themeToggle.innerHTML = ''; // Clear previous content
+      themeToggle.appendChild(img); // Append the new image
+  }
 }
 
-// Initialize theme based on the current state
 document.body.classList.add(isDarkTheme ? 'dark-theme' : 'light-theme');
-setToggleImage(); // Set the image on load
+setToggleImage(); 
 
 themeToggle.addEventListener('click', () => {
-    // Toggle the theme class based on the current state
+    // toggle the theme class based on the current state
     isDarkTheme = !isDarkTheme;
     document.body.classList.toggle('dark-theme', isDarkTheme);
     document.body.classList.toggle('light-theme', !isDarkTheme);
 
-    // Update the button with the new image
+    // update the button with the new image
     setToggleImage();
 });
-

@@ -87,10 +87,7 @@ span{
 }
 
 .home{
-    background-image: url(bg-gal.jpg);
-    background-size: cover; /* This makes the image cover the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
+    background-color:#191A19 ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,6 +290,10 @@ body.light-theme .Education {
     transform: scale(1.1); /* Optional: slight zoom effect */
 }
 
+#themeToggle {
+    width: 100px; /* Make sure the container has a large enough size */
+    height: 50px;
+}
 
 .portfolioinfo a {
     display: inline-flex;
@@ -349,7 +350,7 @@ flex-wrap: wrap;
     background-color: #000000;
     color: white;
     height: 3rem;
-    width: 10rem;
+    width: 5rem;
     border-radius: 5%;
     cursor: pointer;
 }
@@ -458,10 +459,7 @@ background-color: rgb(0, 0, 0);
 
 
 body.light-theme .home {
-    background-image: url(whitec1.jpg);
-    background-size: cover; /* This makes the image cover the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
+    background-color: #F5F5F5;
 }
 
 body.light-theme .header {
@@ -601,8 +599,67 @@ body.light-theme .footer .copyright {
     html{
         font-size: 55%;
     }
-    
+    .skill {
+        padding: 0 2rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make skill take most of the screen width */
+    }
 
+    .Education {
+        padding: 0.2rem 1rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make education take most of the screen width */
+        height: 110px; /* Adjust height for smaller screens */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 8px; /* Further adjust font size */
+    }
+
+    .containerSE {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        margin-top: 10px; /* Adjust margin */
+    }
+
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
+    }
+
+}
+
+@media(max-width:1024px){
+    .skill {
+        padding: 0 2rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make skill take most of the screen width */
+    }
+
+    .Education {
+        padding: 0.2rem 1rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make education take most of the screen width */
+        height: 110px; /* Adjust height for smaller screens */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 8px; /* Further adjust font size */
+    }
+
+    .containerSE {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        margin-top: 10px; /* Adjust margin */
+    }
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
+    }
 }
 
 
@@ -621,6 +678,77 @@ body.light-theme .footer .copyright {
         padding: 2rem 3%;
     }
 
+    
+    .wrapper {
+        min-width: 30%; /* Allow full width on small screens */
+    }
+
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
+    }
+
+    .skill {
+        padding: 0 2rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make skill take most of the screen width */
+    }
+
+    .Education {
+        padding: 0.2rem 1rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make education take most of the screen width */
+        height: 110px; /* Adjust height for smaller screens */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 8px; /* Further adjust font size */
+    }
+
+    .containerSE {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        margin-top: 10px; /* Adjust margin */
+    }
+
+    @media(max-width:800px){ 
+        
+    .wrapper {
+        min-width: 30%; /* Allow full width on small screens */
+    }
+
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
+    }
+
+    .skill {
+        padding: 0 2rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make skill take most of the screen width */
+    }
+
+    .Education {
+        padding: 0.2rem 1rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make education take most of the screen width */
+        height: 110px; /* Adjust height for smaller screens */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 8px; /* Further adjust font size */
+    }
+
+    .containerSE {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        margin-top: 10px; /* Adjust margin */
+    }
+    }   
    
 }
 
@@ -695,7 +823,7 @@ body.light-theme .footer .copyright {
         flex-direction: column-reverse;
     }
     .about img {
-        margin-top: 4rem;
+        margin-top: 3rem;
         width: 70vw;
     }
     .portfolio h2 {
@@ -703,6 +831,35 @@ body.light-theme .footer .copyright {
     }
     .portfoliocontainer{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .skill {
+        padding: 0 2rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make skill take most of the screen width */
+    }
+
+    .Education {
+        padding: 0.2rem 1rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make education take most of the screen width */
+        height: 110px; /* Adjust height for smaller screens */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 8px; /* Further adjust font size */
+    }
+
+    .containerSE {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        margin-top: 10px; /* Adjust margin */
+    }
+
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
     }
 }
 
@@ -733,13 +890,89 @@ body.light-theme .footer .copyright {
     .pe {
         font-size: 10px; /* Adjust font size */
     }
+
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
+    }
+}
+@media (max-width: 515px) {
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
+    }
+    .skill {
+        padding: 0 2rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make skill take most of the screen width */
+    }
+
+    .Education {
+        padding: 0.2rem 1rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make education take most of the screen width */
+        height: 110px; /* Adjust height for smaller screens */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 8px; /* Further adjust font size */
+    }
+
+    .containerSE {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        margin-top: 10px; /* Adjust margin */
+    }
 }
 
+@media (max-width: 450px) {
+
+    .wrapper {
+        min-width: 30%; /* Allow full width on small screens */
+    }
+
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
+    }
+
+    .skill {
+        padding: 0 2rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make skill take most of the screen width */
+    }
+
+    .Education {
+        padding: 0.2rem 1rem 1rem 1rem; /* Adjust padding */
+        width: 90%; /* Make education take most of the screen width */
+        height: 110px; /* Adjust height for smaller screens */
+    }
+
+    .Education h3 span, .skill h3 span {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .pe {
+        font-size: 7px; /* Further adjust font size */
+    }
+
+    .containerSE {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content */
+        margin-top: 10px; /* Adjust margin */
+    }
+}
 /* For small screens (max-width: 480px) */
 @media (max-width: 480px) {
 
     .wrapper {
-        max-width: 80%; /* Allow full width on small screens */
+        min-width: 30%; /* Allow full width on small screens */
+    }
+
+    #themeToggle {
+        width: 100px; /* Ensure there's enough space for the image */
+        height: 50px;
     }
 
     .skill {
