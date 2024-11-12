@@ -36,7 +36,7 @@ const section = document.querySelectorAll('section');
 const observerOptions = {
   root: null, // Use the viewport as the root
   rootMargin: '0px',
-  threshold: 0.1// trigger when 10% of the section is visible
+  threshold: 0.10// trigger when 10% of the section is visible
 };
 
 // Create an IntersectionObserver instance
